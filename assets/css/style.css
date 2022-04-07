@@ -52,7 +52,6 @@ p {
   cursor: pointer;
   /* font: weight size family */
   font: 700 0.75rem "Source Sans Pro";
-  /* mampisy delai kely ilay rehefa survolena */
   transition: 0.3s;
 }
 
@@ -85,7 +84,6 @@ body {
 /********************** HEADER **********************/
 
 header {
-  /* hauteur minimum: 100virtualHeight (hauteur virtuel: zany hoe 100% an ecran dia anazy daholo) */
   min-height: 100vh;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -202,7 +200,7 @@ footer a {
   border-radius: 50px;
   width: 44px;
   height: 44px;
-  /* Tadidio foana ny manisy display: inline-block; snn tsy pris en compte ilay width sy height  */
+  /* Tadidio foana ny manisy display: inline-block; sinon tsy pris en compte ilay width sy height  */
   display: inline-block;
   display: flex;
   justify-content: center;
@@ -210,9 +208,9 @@ footer a {
   transition: 0.5s;
 }
 
-/*********** RESPONSIVE MOBILE ***********/
+/*********** RESPONSIVE ***********/
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 980px) {
   header {
     display: block;
     height: auto;
@@ -246,3 +244,39 @@ footer a {
       font-size: 0.7rem;
   }
 }
+
+
+/* @media screen and (max-width: 650px) {
+  header {
+    display: block;
+    height: auto;
+  }
+
+  header .img-banner {
+    height: 50vh;
+    margin-top: 20px;
+  }
+
+  .section-1 {
+    display: block;
+    margin-bottom: -100px;
+  }
+
+  .section-2 {
+    display: block;
+    margin-bottom: -100px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  footer a {
+    width: 35px;
+    height: 35px;
+  }
+  
+  footer i {
+      font-size: 0.7rem;
+  }
+} */
