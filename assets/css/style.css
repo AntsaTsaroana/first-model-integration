@@ -1,0 +1,248 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(../fonts/SourceSansPro-Light.ttf);
+}
+
+/*********** GLOBALE CONFIGURATION ***********/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  outline: none;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 200;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  line-height: 30px;
+  /* 20px: top et buttom, 0: right et left */
+  margin: 20px 0;
+}
+
+.button {
+  border: 1px solid #ccc;
+  background: transparent;
+  border-radius: 50px;
+  padding: 13px 30px;
+  display: inline-block;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  /* font: weight size family */
+  font: 700 0.75rem "Source Sans Pro";
+  /* mampisy delai kely ilay rehefa survolena */
+  transition: 0.3s;
+}
+
+.button:hover,
+footer a:hover {
+  border: 1px solid #538497;
+  color: #538497;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.section-1,
+.section-2,
+.contact {
+  /* box-shadow: inset axeY axeY blur color */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.083);
+}
+
+/* ************************************************* */
+
+body {
+  font-family: "Source Sans Pro";
+}
+
+/********************** HEADER **********************/
+
+header {
+  /* hauteur minimum: 100virtualHeight (hauteur virtuel: zany hoe 100% an ecran dia anazy daholo) */
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.img-banner {
+  background: url(../img/1.jpeg) center/cover;
+}
+
+/********************** SECTION 1 **********************/
+
+.section-1 {
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: 37% 63%;
+}
+
+.section-1 .img {
+  background: url(../img/3.jpg) center/cover;
+}
+
+/********************** SECTION 2 **********************/
+
+.section-2 {
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
+
+.section-2 .img {
+  background: url(../img/2.jpg) center/cover;
+}
+
+/********************** CONTACT********************* */
+
+.contact {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "input1 input2"
+    "zone-text zone-text";
+  /* gap: ecart */
+  gap: 10px;
+  width: 85%;
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+.zone-text {
+  /* zone-text: ilay zone-text etsy am .form-grid */
+  grid-area: zone-text;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  margin: 20px 0 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  transition: 0.2s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border: 1px solid #538497;
+}
+
+textarea {
+  resize: none;
+  height: 180px;
+  margin-bottom: 10px;
+}
+
+/********************** FOOTER **********************/
+
+footer {
+  padding: 30px 0;
+  position: relative;
+}
+
+footer:before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.083);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin: 0 auto;
+  min-width: 300px;
+}
+
+footer a {
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  width: 44px;
+  height: 44px;
+  /* Tadidio foana ny manisy display: inline-block; snn tsy pris en compte ilay width sy height  */
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+/*********** RESPONSIVE MOBILE ***********/
+
+@media screen and (max-width: 650px) {
+  header {
+    display: block;
+    height: auto;
+  }
+
+  header .img-banner {
+    height: 50vh;
+    margin-top: 20px;
+  }
+
+  .section-1 {
+    display: block;
+    margin-bottom: -100px;
+  }
+
+  .section-2 {
+    display: block;
+    margin-bottom: -100px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  footer a {
+    width: 35px;
+    height: 35px;
+  }
+  
+  footer i {
+      font-size: 0.7rem;
+  }
+}
